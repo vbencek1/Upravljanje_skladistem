@@ -1,0 +1,24 @@
+Potrebne tehnologije:
+1. PostgreSQL
+2. Gambas3 -> instalacija: 
+	Potrebno je dodati PPA u sources.list. U terminalu izvršiti:
+
+	$ sudo add-apt-repository ppa:gambas-team/gambas3
+
+	Zatim ažurirati sources i instalirati gambas:
+
+	$ sudo apt-get update
+	$ sudo apt-get install gambas3
+
+Postavljanje baze podatka:
+1. prebaciti se u postgres korisnika: sudo -su postgres
+2. kreirati novog korisnika sa imenom: valentino i lozinkom: valentino (mora imati sve dozvole)
+3. kreirati bazu podataka: Projekt_Bencek
+4. izvrsiti naredbu za kreiranje(tablica, okidaca,..): psql -U valentino -d Projekt_Bencek -h localhost -a -f BPbencek.sql
+5. Isto napraviti i za: Unosi.sql kako bi se tablice popunile početnim vrijednostima: psql -U valentino -d Projekt_Bencek -h localhost -a -f Unosi.sql
+ - ponekad je potrebno i postaviti prava na BPbencek.sql i Unosi.sql ->npr chmod 777 ...
+
+Otvaranje aplikacije:
+1. Pokrenuti gambas (preko izvrsne datoteke ili terminala (naredba:gambas))
+2. Otvoriti projekt: opcija "Open project" -> izabrati mapu: ~/Projekt_Bencek
+3. Pokrenuti aplikaciju: pritisnuti na sivi "run button"
